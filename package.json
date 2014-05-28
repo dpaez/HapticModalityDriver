@@ -1,0 +1,18 @@
+{
+  "name": "HapticModalityDriver",
+  "version": "0.0.0",
+  "description": "A haptic modality driver for the plusultra platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Paez",
+  "license": "MIT",
+  "dependencies": {
+    "inherits": "^2.0.1",
+    "hammerjs": "^1.1.3"
+  },
+  "devDependencies": {
+    "browserify": "^4.1.5"
+  }
+}
