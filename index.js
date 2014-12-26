@@ -34,7 +34,11 @@ function HapticModalityDriver( opts ){
   this.id = 'WEBHAPTIC';
 
   // output
-  this.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+  this.vibrate = navigator.vibrate.bind(navigator) ||
+        navigator.webkitVibrate.bind(navigator) ||
+        navigator.mozVibrate.bind(navigator) ||
+        navigator.msVibrate.bind(navigator);
+
   if ( this.vibrate ){
     this.on( 'synthetized', this.fission.bind(this) );
   }
@@ -44,7 +48,10 @@ inherits( HapticModalityDriver, ModalityDriverChannel );
 
 HapticModalityDriver.prototype.fission = function( time ){
   time = time || 1000;
-  this.vibrate( time );
+  var pattern = [];
+  pattern.push( time );
+  console.log( 'HapticMD::onFission ', time );
+  this.vibrate( pattern );
 };
 
 HapticModalityDriver.prototype.newEvent = function( data ){

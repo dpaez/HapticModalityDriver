@@ -10,7 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "inherits": "^2.0.1",
-    "hammerjs": "^1.1.3"
+    "hammerjs": "^1.1.3",
+    "browserify": "^4.2.3"
   },
   "devDependencies": {
     "browserify": "^4.1.5"
