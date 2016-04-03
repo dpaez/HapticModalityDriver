@@ -48,7 +48,7 @@ inherits( HapticModalityDriver, ModalityDriverChannel );
 
 HapticModalityDriver.prototype.fission = function( time ){
   time = time || 1000;
-  var pattern = [ 500, 30, 300 ];
+  var pattern = [ 500, 200, 200 ];
   //pattern.push( time );
   console.log( 'HapticMD::onFission ', time );
   this.vibrate( pattern );
